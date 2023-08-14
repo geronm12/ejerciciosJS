@@ -76,3 +76,52 @@ function ReadArrayLength(vector) {
 // }
 
 // GetMaxIndex(arrayDeArrays);
+
+// let s = 2
+// switch(s){
+//     case 1:
+//     case 2:
+//         console.log("a");
+//         break;
+//     default:
+//         console.log("s");
+//         break;
+// }
+
+//strings, numbers, boolean, funciones
+//callbacks
+let nombreUsuario = prompt("Ingrese su nombre de usuario");
+let contraseña = prompt("Ingrese su contraseña");
+let mail = prompt("Ingrese su mail");
+
+CrearUsuario(
+  nombreUsuario,
+  contraseña,
+  function (param) {
+    if (
+      param === "" ||
+      param === " " ||
+      param === undefined ||
+      param === null
+    ) {
+      return false;
+    }
+
+    return true;
+  },
+  mail
+);
+
+function CrearUsuario(nombreUsuario, password, validate, mail) {
+  if (validate(nombreUsuario) && validate(password) && validate(mail)) {
+    alert(
+      "Usuario Creado con éxito \n" +
+        "Su nombre de usuario es: " +
+        nombreUsuario
+    );
+    //guardamos en la base de datos
+    //enviamos mail de verificación
+  } else {
+    alert("El nombre de usuario y la contraseña con obligatorios");
+  }
+}
