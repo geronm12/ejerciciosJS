@@ -158,13 +158,7 @@ class CarritoDeCompras {
 <button id="add_ps">Agregar</button> */
 }
 
-class Producto {
-    descripcion;
-    precio_unitario;
-}
-
 const arrayProductos = [];
-
 
 const btn_add_ps = document.getElementById("add_ps");
 const btn_add_pc = document.getElementById("add_pc");
@@ -192,18 +186,45 @@ btn_facturar.addEventListener("click", function () {
   total.innerHTML = `El monto total que debe abonar es de: ${carrito.obtenerTotal()}`;
 });
 
-
-{/* <div>
+{
+  /* <div>
 <span id="span_ps5">Playstation 5</span>
 <label id="lbl_ps5">3</label>
 <label>Cantidad</label>
 <input type="number" step="1" id="cant_ps5" value="0" />
 <button id="add_ps">Agregar</button>
-</div> */}
-
+</div> */
+}
 
 //Consigna
 //Calculadora -> DOM
 //Clases y objetos
 //Suma
 //División -> 0 -> Marcar un  error  label con color rojo
+class Producto {
+  precio;
+  descripcion;
+  constructor(precio, descripcion) {
+    this.precio = precio;
+    this.descripcion = descripcion;
+  }
+}
+
+const array_productos = [];
+array_productos.push(new Producto(500000, "Playstation5"));
+array_productos.push(new Producto(300000, "PcGamer"));
+array_productos.push(new Producto(200000, "Teclado"));
+
+console.log(array_productos);
+
+const produ = document.getElementById("productos");
+
+let htmlString = "";
+
+array_productos.forEach((element) => {
+  htmlString += `<h1>${element.descripcion}</h1> <label>${element.precio}</label>`;
+});
+
+produ.innerHTML = htmlString;
+
+

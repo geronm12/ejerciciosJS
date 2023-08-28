@@ -10,9 +10,9 @@
       <li>Home</li>
     </ul>
     <button id="display">Mostrar Lista</button> -->
-    <div>
+    <!-- <div>
       <span id="span_ps5" >Playstation 5</span>
-      <label id="lbl_ps5">3</label>
+      <label id="lbl_ps5">1200</label>
       <label>Cantidad</label>
       <input type="number" step="1" id="cant_ps5" value="0"/>
       <button id="add_ps">Agregar</button>
@@ -27,7 +27,31 @@
     <div id="total">
 
     </div>
-    <button id="facturar">Facturar</button>
-    <script src="objetos.js"></script>
+    <div id="productos">
+
+    </div> -->
+    <!-- <button id="facturar">Facturar</button> -->
+    <table border="1">
+      <thead>
+        <tr>
+          <td>Nombre</td>
+          <td>Nota</td>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+    <hr />
+    <div>
+      <label>Ingres el nombre del estudiante</label>
+      <input id="nombre" type="text" placeholder="Nombre" />
+      <select id="nota">
+        <option>Seleccion una nota</option>
+        <option value="A">A</option>
+        <option value="D">D</option>
+      </select>
+      <button id="btnAgregar">Agregar Estudiante</button>
+    </div>
+
+    <script src="objetos_b.js"></script>
   </body>
 </html>
