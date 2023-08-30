@@ -1,0 +1,26 @@
+body {
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+
+  margin-left: 10px;
+}
+
+.my-container {
+  width: 30% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
